@@ -1,6 +1,16 @@
 Show.delete_all()
+User.delete_all()
+FavouriteShow.delete_all
 
-Show.create({
+user_one = User.create(
+  {
+  email: "tegan@email.com",
+  password: "password",
+  password_confirmation: "password"
+  }
+)
+
+show1 = Show.create({
   name: "Scandal",
   series: 6,
   description: "A former White House Communications Director starts her own crisis management firm only to realize her clients are not the only ones with secrets.",
@@ -8,7 +18,7 @@ Show.create({
   programmeID: 1
   })
 
-Show.create({
+show2 =Show.create({
   name: "House Of Cards",
   series: 4,
   description: "A Congressman works with his equally conniving wife to exact revenge on the people who betrayed him.",
@@ -16,10 +26,15 @@ Show.create({
   programmeID: 2
   })
 
-Show.create({
+show3 = Show.create({
   name: "Sherlock",
   series: 4,
   description: "A modern update finds the famous sleuth and his doctor partner solving crime in 21st century London.",
   image: "http://stuffpoint.com/sherlock/image/111943-sherlock-sherlock-poster.jpg",
   programmeID: 3
+  })
+
+favouriteShow1 = FavouriteShow.create({
+  user: user_one,
+  show: show1
   })
