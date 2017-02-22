@@ -10,6 +10,14 @@ user_one = User.create(
   }
 )
 
+user_two = User.create(
+  {
+  email: "phoebe@email.com",
+  password: "password",
+  password_confirmation: "password"
+  }
+)
+
 show1 = Show.create({
   name: "Scandal",
   series: 6,
@@ -37,4 +45,14 @@ show3 = Show.create({
 favouriteShow1 = FavouriteShow.create({
   user: user_one,
   show: show1
-  })
+})
+
+favouriteShow2 = FavouriteShow.create({
+  user: user_two,
+  show: show2
+})
+
+favouriteShow2 = FavouriteShow.create({
+  user: user_two,
+  show: show3
+})
